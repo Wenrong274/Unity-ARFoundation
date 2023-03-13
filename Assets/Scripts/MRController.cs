@@ -53,7 +53,7 @@ public class MRController : MonoBehaviour
 
     private async UniTask InitTask()
     {
-        m_TrackedImageManager = AddTrackedImage.TrackedImageManager;
+        m_TrackedImageManager = ARTrackedImageManagerInitializer.TrackedImageManager;
         await UniTask.Delay(1000);
         ShowARPlane(ARPlaneOn);
         m_TrackedImageManager.trackedImagesChanged += OnTrackedImageChanged;
